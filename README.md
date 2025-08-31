@@ -102,9 +102,50 @@ The workflow supports uploading FAQs , preprocessing, creating embeddings, build
 * Builds context prompt and generates an answer strictly from retrieved documents.
 * Returns fallback if no sufficient context is found.
 
-
 # Usage
 
-> source venv/bin/activate
-> source ./setup.sh
-> uvicorn app.main:app --reload
+- source ./setup.sh
+- source venv/bin/activate
+- uvicorn app.main:app --reload
+
+# Screenshots
+
+## RAG Retrieval
+<img width="468" height="244" alt="image" src="https://github.com/user-attachments/assets/258d2340-1e15-4b53-83aa-8059934606bc" />
+<img width="468" height="244" alt="image" src="https://github.com/user-attachments/assets/00b9ec2e-05ed-4b07-be3a-6d3f55145fa3" />
+
+```json
+{
+  "query": "whats glaucoma",
+  "results": [
+    {
+      "record_id": 11415,
+      "group_id": 11415,
+      "similarity": 0.6990639567375183,
+      "question": "What is (are) Glaucoma ?",
+      "rerank_score": 3.6911864280700684
+    },
+    {
+      "record_id": 13360,
+      "group_id": 13360,
+      "similarity": 0.5292325019836426,
+      "question": "What is (are) early-onset glaucoma ?",
+      "rerank_score": 1.4708786010742188
+    },
+    {
+      "record_id": 5794,
+      "group_id": 5794,
+      "similarity": 0.5310231447219849,
+      "question": "What are the symptoms of Glaucoma ?",
+      "rerank_score": 0.9771765470504761
+    }
+  ]
+}
+```
+## Generate Answer
+<img width="468" height="244" alt="image" src="https://github.com/user-attachments/assets/b2e1a6b9-bcaf-4c7c-b7fb-2ee871bea943" />
+<img width="468" height="244" alt="image" src="https://github.com/user-attachments/assets/8af56f0f-6b54-4265-9e38-425dac91ee9c" />
+<img width="468" height="244" alt="image" src="https://github.com/user-attachments/assets/582b39d1-9929-4d87-8829-b422ec1d7997" />
+
+
+
