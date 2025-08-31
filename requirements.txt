@@ -1,0 +1,33 @@
+# FastAPI and ASGI server
+fastapi
+uvicorn
+
+# Data processing
+pandas
+scikit-learn
+
+# Utils
+pydantic-settings
+python-multipart
+
+# Vector DB
+faiss-cpu
+
+# LLM and RAG
+langchain
+langchain-ollama
+langgraph
+ollama
+
+# Embedding models
+sentence-transformers
+transformers
+
+# Evaluation
+ragas
+evaluate
+rouge-score
+bert-score
+
+# NLP utilities
+nltk
